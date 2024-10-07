@@ -1,0 +1,6 @@
+basically u can sort the string in string vector by using sort function in the sorting.
+
+for binary search tree to detect whether it has a dead end there is a simple logic that the either the right end of the tree will be maximum or
+the left end of the tree will be minimum there will be no node in the range of node-1 and node + 1.
+Hence we will find the dead end of the binary search tree
+

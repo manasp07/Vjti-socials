@@ -1,0 +1,326 @@
+React MUI Palette is used to adjust the colors for your component or specify 
+default values. The Material UI theme module is utilized in the Palette. It can be used to change the component colors to match your brand.
+
+
+   #########################const persistedReducer=persistReducer(persistConfig,authreducer);####
+
+The code you provided is illustrating the creation of a "persisted reducer" using Redux and a library called "redux-persist." Let's break down this line in brief:
+
+persistedReducer: This is a variable that will hold the "persisted" version of your Redux reducer. It is the result of using persistReducer to wrap your original reducer.
+
+persistReducer(persistConfig, authreducer): This is a function call to persistReducer. It takes two arguments:
+
+persistConfig: This is a configuration object that specifies how and where the state from the authreducer should be persisted. It defines options like the storage mechanism (e.g., local storage or AsyncStorage), whitelist/blacklist options, and more.
+authreducer: This is the original Redux reducer that you want to "persist." In other words, you want to save and load the state managed by this reducer across page reloads or app restarts.
+The purpose of this line is to create a modified version of your authreducer that is capable of persisting its state to a chosen storage mechanism as specified in the persistConfig. This is particularly useful for maintaining the user's authentication state, for example, so that when a user closes and reopens your application, they are still logged in or their authentication status is preserved. The persistedReducer can then be used in your Redux store configuration instead of the original authreducer to enable state persistence.
+
+cssbasline:
+This basically helps to reset our css to basic css  (resetting css)
+#######################Material UI PN HEAVY USE KRTO AHE HA BHAu##################
+
+The useNavigate hook is part of the react-router-dom package that allows programmatic routing inside a React application. The method returns a function that can be invoked with a URI to redirect the client to the respective page.
+
+Why we are able to write the css as "=" and not ":" for example it is mentioned below 
+<FlexBetween padding="1rem 6%" so here we are writing css properties for a css component which 
+we have made separately in the other file in that we have imported BOX from material UI which is 
+allowing us to write the css properties in the form of = . 
+
+Clamp is a function in css where u can use minimum value of font maximum value of the font and prefered value of the font  
+It adjust the font size according to the screen size of the window.
+
+app.use("/assets",express.static(path.join(__dirname,"public/assets")));
+ so basically this is the code or line statement where if u run in the frontend server with host starting with /assets your picture for the user
+will be selected from the assets folder in the hosts directory for the corresponding entries
+
+so basically token is assigned or created when you are logged in with your account in the site
+const token=jwt.sign({id:user._id },process.env.JWT_SECRET); this is the statement that creates the generation of the token
+
+{({getRootProps, getInputProps}) => {
+  // This is a function that receives an object with two functions as arguments: getRootProps and getInputProps.
+  // These functions are most likely provided by a library, such as react-dropzone, for handling file uploads.
+
+  <Box
+    {...getRootProps()}
+    // The code is rendering a <Box> component and spreading the properties returned by the getRootProps function as props.
+    // getRootProps is probably used for defining the behavior of the drop area for file uploads.
+    // The Box component is likely a Material-UI component, used for creating styled containers.
+
+    border={`2px dashed ${palette.primary.main}`}
+    // The Box component is given a border with a 2px width, and it is dashed with the color defined in the 'palette.primary.main' variable.
+
+    p="1rem"
+    // Padding of 1rem (16px) is added to the Box component.
+
+    sx={{"&:hover": {cursor: "pointer"}}}
+    // This appears to be a styling object using the sx prop (a feature in Material-UI for styling components).
+    // It defines a CSS rule that changes the cursor to a pointer when the Box is hovered.
+
+  >
+    <input {...getInputProps()} />
+    // This is rendering an <input> element and spreading the properties returned by the getInputProps function as props.
+    // getInputProps is likely used to manage the behavior of the file input element.
+
+    {!values.picture ? (
+      <p>Add picture Here</p>
+    ) : (
+      <FlexBetween>
+        <Typography>{values.picture.name}</Typography>
+        <EditOutlinedIcon />
+      </FlexBetween>
+    )}
+    // This is a conditional rendering based on the value of 'values.picture'.
+    // If 'values.picture' is falsy, it renders a paragraph saying "Add picture Here."
+    // If 'values.picture' is truthy, it renders a component or components, likely displaying the name of the selected picture and an edit icon.
+  }
+
+  // The code snippet is enclosed within a function block, but it's missing a return statement to render this JSX.
+}
+
+
+pan 4" means that the element takes up a quarter of the available width in this particular grid system. This is a way to create responsive and flexible layouts in React applications, ensuring that content is displayed properly on different screen sizes and devices. 
+
+The sx prop lets you work with a superset of CSS that packages all of the style functions exposed in @mui/system. You can specify any valid CSS using this prop, as well as many theme-aware properties that are unique to MUI System.
+basically sx is used to add more css properities to the css component
+
+ <IconButton>
+  <Search/>
+  </IconButton> we have imported this from the material ui also we have imported inputbase
+we have many functionalities that we have imported from the material UI
+Navbar madhe khup saare functionalities haii banvle ahet with a lot of material ui functionality je import kelyaa ahet
+
+################doubt##############
+How does the material UI know the theme we are providing in the heirachy is being used by the navbar?
+
+cleared through this answer that the themeprovider provides theme to all the material UI components so as usetheme is material UI component the theme
+we are providing is being used by the usetheme function and hence we can access our themesetting mentioned in our theme.js
+
+In Material-UI, an IconButton is a component used to create a button that displays an icon. It's a simple and common UI element for triggering actions, navigation, or interactions in a web application. Here's what IconButton is used for and how it works:
+
+Displaying Icons: IconButton is primarily used to display icons rather than text. You can place various Material-UI icons or custom icons within the IconButton component.
+
+Action Trigger: IconButton is interactive and can be clicked by the user. It's often used to trigger actions, such as submitting a form, opening a dialog, navigating to a different page, or toggling a feature.
+
+Visual Feedback: Icons within an IconButton can provide visual cues to the user, making it clear what action or function the button represents. For example, a "Search" icon in an IconButton can indicate a search action.
+
+Custom Styling: Like other Material-UI components, IconButton can be customized and styled to match the design of your application. You can change the icon's color, size, and other properties to fit your needs.
+
+Accessibility: Material-UI's IconButton is designed with accessibility in mind. It includes appropriate ARIA roles and attributes to ensure that it can be easily used by assistive technologies and that it complies with accessibility standards.
+
+Variants: IconButton can be used with various variants, such as "outlined" or "contained," depending on your application's design. You can also apply CSS-in-JS styling using the sx prop for additional customization.
+In Material-UI, a FormControl is a component used to manage and control form elements and their interactions in a web application. It's an essential part of creating structured and accessible forms. FormControl provides a way to group form controls and apply styling and layout to form elements and their associated labels. Here's a detailed explanation of how FormControl works and its key features:
+
+Grouping Form Controls:
+
+FormControl serves as a container for grouping related form controls. It's typically used to enclose form fields like text inputs, checkboxes, radio buttons, and select menus.
+Labeling Form Fields:
+
+You can associate a label with the form control using the <InputLabel> component. This label helps users understand the purpose of the form field.
+Layout and Styling:
+
+FormControl provides a way to control the layout and styling of its child form controls. You can use variant and margin props to control the spacing and appearance of the form controls.
+Validation and Error Handling:
+
+You can handle validation and error messages within a FormControl. Material-UI's components provide error handling features like the error prop to indicate that a field has an error, and the helperText prop to display error messages.
+Accessibility:
+
+Material-UI's FormControl components are designed with accessibility in mind. They include ARIA roles and attributes to ensure that the form is navigable and usable by assistive technologies.
+Form Layouts:
+
+FormControl is often used in combination with other Material-UI components like TextField, Checkbox, Radio, Select, and more to create complete form layouts. For example, you can use FormControl to group a TextField and an associated label.
+
+InputBase is a component provided by Material-UI that is used for creating text input fields in a web application. It serves as a fundamental building block for text input, and you can use it to create various forms and input elements. Here's an overview of what InputBase is used for:
+
+Text Input Fields: InputBase is commonly used for creating text input fields such as textboxes, search bars, and text areas. You can use it to gather user input in the form of text.
+
+Custom Styling: It allows you to apply custom styling and theming to text input fields. Material-UI's styling system makes it easy to customize the appearance of input fields to match your application's design.
+
+Accessibility: Material-UI components, including InputBase, are designed with accessibility in mind. They come with built-in support for ARIA attributes, making it easier to create accessible forms and input fields.
+
+Input Validation: You can integrate input validation logic with InputBase to ensure that user inputs meet specific criteria or constraints. This can be important for form validation.
+
+Interactivity: It supports various user interactions, like focus, blur, and user input events. You can attach event handlers to respond to user actions.
+
+Integration with Form Controls: InputBase can be used within other Material-UI form controls like TextField to create complete form elements with labels, validation, and styling.
+
+As for Material-UI itself, it is a popular and widely used open-source library for building user interfaces in React applications. Material-UI provides a set of pre-designed and highly customizable UI components, themes, and utilities that follow Google's Material Design guidelines. It simplifies the process of creating aesthetically pleasing and consistent user interfaces by offering a wide range of components, including buttons, forms, modals, navigation elements, and more. Material-UI is known for its flexibility and theming system, which allows you to adapt the look and feel of your application to your brand or design preferences.
+
+In summary, InputBase is a component within the Material-UI library that is used for text input fields, and Material-UI is a comprehensive UI library for React that provides a collection of components and tools for creating modern and visually appealing web applications.
+
+In Material-UI, useMediaQuery is a hook that helps you check the screen size and apply different styles or behavior in your React application based on the screen's width or other media features. It's like asking your app, "Is the screen size big or small?" and then making decisions accordingly.
+p matlab padding and m matlab margin
+
+we use rem instead of other values so that we get consistency across wide variety of browsers in the web.
+
+######################Formik is a small library that helps you with the 3 most annoying parts:##############################
+
+Getting values in and out of form state
+Validation and error messages
+Handling form submission
+By colocating all of the above in one place, Formik will keep things organized--making testing, refactoring, and reasoning about your forms a breeze.
+
+Dropzone" is a term commonly used to describe a component or area in a web application where users can drag and drop files for various purposes, such as file uploads. In React, you can create a Dropzone component to enable users to drag and drop files into a designated area. There are various libraries available to help you implement a Dropzone in your React application. One popular library is react-dropzone.
+
+Yup is a schema builder for runtime value parsing and validation. Define a schema, transform a value to match, assert the shape of an existing value, or both. Yup schema are extremely expressive and allow modeling complex, interdependent validations, or value transformation.
+Once added to your project, you can use it to create schemas that can then be used to either validate input, or cast input to a valid state
+
+################# main kam######################
+email:yup.string().email("invalid email").required("required"), so in this email invalid email check for the validity for the regular format 
+of the email that is eexample@example.com so here i need to change this for the vjti emails use only
+
+Formik is a popular library for handling form state, form submission, and validation in React applications
+The {...} block within the <Formik> component is used to render the form elements and interact with the Formik state and form handling functions. It uses a render-prop pattern, which means you provide a function as the child of the <Formik> component, and this function receives various properties and functions for handling the form:
+Inside the {...} block, there is a <form> element with an onSubmit event handler set to handleSubmit. This means that when the form is submitted (e.g., by clicking a submit button), the handleSubmit function provided by Formik will be called, which in turn triggers the handleFormSubmit function that you specified in the onSubmit prop of the <Formik> component.
+helperText property is set to the errors.firstName value. This means that if there are validation errors, the error message will be displayed to provide feedback to the user.
+
+Putting it all together, the line helperText={touched.firstName && errors.firstName} determines the content of the helper text for the firstName form field. The helper text is displayed if and only if both of the following conditions are met:
+
+The firstName field has been touched by the user (i.e., it has been interacted with).
+There are validation errors associated with the firstName field.
+So, the helperText will show an error message specific to the firstName field when it has been touched, and there are validation errors for that field. This is a common practice in forms to provide feedback to users, especially when they make mistakes or provide incorrect input in a field.
+
+
+
+
+The getInputProps function in a library like react-dropzone is used to generate a set of properties and event handlers that should be applied to an <input> element, which is typically hidden and used for selecting files for upload. It simplifies the process of managing file input elements in a React application and is often used in conjunction with the getRootProps function to create a user-friendly file upload experience
+The getRootProps function in a library like react-dropzone is used to provide a set of properties and event handlers that can be applied to a container or element to define the behavior and appearance of the drop zone for file uploads. It simplifies the process of creating a drag-and-drop area for files, making it easier to handle file uploads in a React application. 
+
+In the context of a <TextField> component in various JavaScript libraries and frameworks, such as Material-UI for React, the type attribute defines the type of input that the text field should accept. This attribute helps specify the behavior and validation rules for the input.
+
+
+The code snippet you provided, value={values.lastName} name="lastName", is used in a form element, typically an <input> field, to specify and manage the value and name of that form field. Let's break down what each part of this code does:
+
+value={values.lastName}:
+
+value is an attribute that specifies the current value of an input field.
+values.lastName is likely a reference to the lastName field in a form's state or data structure.
+This part of the code sets the value of the input field to the current value stored in the values.lastName variable, which is part of the form's state.
+name="lastName":
+
+name is an attribute that specifies the name of the form field. The field's name is used to identify the field and is typically associated with how the field data is structured or processed when the form is submitted.
+"lastName" is the name you are assigning to the input field. This name is important because it will be used as a key when accessing the value of the field in the form's data, such as when handling the form submission or validation.
+
+In Formik, the values feature is a part of the form state management system, and it represents an object that holds the current values of all the form fields. The values object is a central piece of Formik's form management, and it plays a crucial role in tracking and managing the data entered into the form fields. Here's what the values feature does in Formik:
+
+Initial Values: When you define a Formik form, you set the initial values for each form field using the initialValues prop. Formik uses these initial values to populate the values object when the form is initially rendered. This helps to display any existing data if you are editing a record or initializing the form with default values.
+
+Dynamic Updates: As the user interacts with the form, the values object is updated automatically. Formik manages these updates as the user types into input fields, selects options in dropdowns, or makes any other changes to form field values.
+
+Access to Form Data: The values object provides a convenient way to access the current state of the form. You can access the values of individual form fields by referencing the corresponding property in the values object.
+
+Form Submission: When the user submits the form, the values object contains all the data entered by the user. You can access this data in the onSubmit function defined in Formik to process the form submission, such as sending the data to a server or performing any other necessary actions.
+
+What is payload in Redux toolkit?
+payload is the name of data that you are sending to your store to update the corresponding reducer.
+
+he line const formData = new FormData(); initializes a new instance of the FormData object in JavaScript. FormData is an API that provides a way to easily construct a set of key/value pairs representing form fields and their values. It is typically used in web applications for handling and sending data from HTML forms, especially when dealing with file uploads.
+
+jwt secret tere data ko encrypt karne use karte hai,aur sirf backend aur frontend ko hi pata rehta hai woh secret,toh sirf wahi dono decode kar sakte hai usse.
+useeffect tera tabhi call hota hai sab tera page 1st time load hota hai toh tabhi jo bhi karna hai tujhe useeffect mein kar sakta hai.
+usestate mai pura app reload hota hai i MEAN rerender hota hai.
+
+he sx prop is a shortcut for defining custom styles that has access to the theme. The sx prop lets you work with a superset of CSS that packages all of the style functions exposed in @mui/system . You can specify any valid CSS using this prop, as well as many theme-aware properties that are unique to MUI System.
+
+In many databases, including MongoDB, the field named "_id" is a special field used to uniquely identify a document within a collection. Each document in a MongoDB collection must have a unique value for the "_id" field. If you don't explicitly provide a value for the "_id" field when inserting a document, MongoDB will automatically generate a unique ObjectId for it.
+_id is the id of the user or the new data we insert in the mongoDB
+
+Flex Container and Flex Items:
+
+In a Flexbox layout, you have a flex container that holds a set of flex items.
+The main axis is the primary axis along which the flex items are distributed. The cross axis is perpendicular to the main axis.
+flexBasis Property:
+
+The flexBasis property sets the initial size of a flex item along the main axis.
+It can be set to a length value (e.g., pixels or percentages) or one of the keywords auto, content, or fit-content.
+If set to a length, it represents the item's size along the main axis before any free space is distributed.
+If set to auto, the browser will use the item's content size as the initial size.
+Usage in the flex Shorthand:
+
+The flex shorthand property combines flexGrow, flexShrink, and flexBasis.
+The order of the values is flexGrow, flexShrink, and flexBasis.
+For example: flex: 1 0 200px; means the item can grow, won't shrink, and has an initial size of 200 pixels
+In other words, the value prop ensures that the input field's displayed value is always equal to the post variable, and the onChange event handler updates the post variable whenever the user types something into the input.
+
+#####################IMPORTANT##################################
+
+ return (
+    <>
+      {posts.map(
+        ({
+          _id,
+          userId,
+          firstName,
+          lastName,
+          description,
+          location,
+          picturePath,
+          userPicturePath,
+          likes,
+          comments,
+        }) => (
+          <PostWidget
+            key={_id}
+            postId={_id}
+            postUserId={userId}
+            name={`${firstName} ${lastName}`}
+            description={description}
+            location={location}
+            picturePath={picturePath}
+            userPicturePath={userPicturePath}
+            likes={likes}
+            comments={comments}
+          />
+        )
+      )}
+    </>
+this gives the best explaination of the component ever 
+This code appears to be a React component that maps over an array of posts and renders a PostWidget component for each post. Let's break down the key components of the code:
+
+jsx
+
+return Statement:
+
+This code is inside a React functional component's render method. The return statement indicates what JSX (React elements) should be rendered by this component.
+<>{...}</> (Fragment):
+
+The <>...</> syntax is a shorthand for a React Fragment. Fragments are used to group multiple children without adding an extra node to the DOM. It's a cleaner way of returning adjacent JSX elements.
+posts.map:
+
+The map function is used to iterate over each element in the posts array.
+Destructuring Post Properties:
+
+The object properties of each post are destructured within the map function parameters. This is a way of extracting specific properties from each post object.
+Rendering <PostWidget> Component:
+
+For each post, a <PostWidget> component is rendered.
+The properties of the post (e.g., _id, userId, firstName, etc.) are passed down as props to the <PostWidget> component.
+key Prop:
+
+The key prop is set to the _id of each post. React uses this to efficiently update the DOM when the array of posts changes.
+Template Literals for Name:
+
+The name prop is constructed using template literals, combining the firstName and lastName properties.
+Passing Other Post Properties:
+
+Other post properties (description, location, picturePath, etc.) are passed down to the <PostWidget> component as props.
+In summary, this code is responsible for rendering a list of PostWidget components, each representing a post with specific properties. The use of destructuring and passing down individual properties as props allows for cleaner and more readable code.
+
+  const isLiked = Boolean(likes[loggedInUserId]);
+this helps to keep the likes on the post updated so that if the page is refreshed the like is retained rather than retaining all the likes
+const patchLike = async () => {
+      const response = await fetch(`http://localhost:3001/posts/${postId}/like`, {
+        method: "PATCH",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ userId: loggedInUserId }),
+      });
+      const updatedPost = await response.json();
+      dispatch(setPost({ post: updatedPost }));
+    }; this code gives the backend whether the user has liked the post or not
+
+######################################ERRROS I SOLVED###################################
+SO BASICALLY I SOLVED THE ERROR AS THE REQUEST I WAS TAKING IN THE BACKEND WAS WITH TWO KEYS IN THE BODY 
+ONE KEY IS BODY AND ANTOHER KEY IS HEADER 
+SO IN ORDER TO SEPARATE BODY AND HEADER WE NEED TO SEND IT SEPARATLEY AS REQ.BODY.BODY AND REQ.BODY.HEADER
+SO YOU NEED TO BASICALLY CHECK THE ERRORS BY console.logGING EACH PLACE WHERE THE ERROR IS BEING FOUND SO TRY AND UNDERSTAND THAT
